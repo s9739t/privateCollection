@@ -1,1 +1,2 @@
-# 私有采集与收藏
+# privateCollection
+采集与收藏（私有）
