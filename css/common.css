@@ -17,6 +17,10 @@ input, img {
     margin: 0;
 }
 
+::selection {
+    background-color: #ff8621;
+}
+
 a {
     color: #175199;
     text-decoration: none;
@@ -46,6 +50,7 @@ article {
     width: 888px;
     margin: 0 auto;
     background-color: #FFFFFF;
+    border-bottom: 1px solid #E4D0D0;
 }
 
 header {
@@ -66,18 +71,21 @@ header h1 {
 
 header #info {
     padding: 10px 20px;
-    text-align: right;
     font-weight: 500;
     color: gray;
+    overflow: hidden;
 }
 
 header #info #time {
     float: left;
 }
 
+header #info #author {
+    float: right;
+}
+
 .content {
     margin: 10px;
-    border-bottom: 1px solid #E4D0D0;
     max-width: 100%;
     overflow: hidden;
     word-break: break-all;
@@ -102,7 +110,9 @@ header #info #time {
     display: inline-block;
     margin: 0;
     box-sizing: content-box;
-    border: 0px;
+    border: 0;
+    box-shadow: inherit;
+    border-radius: 0;
 }
 
 .content pre, .content code {
@@ -119,6 +129,35 @@ header #info #time {
     line-height: 1.6;
 }
 
+table {
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+
+table th {
+    background-color: #3F3F3F;
+    border: 1px solid #3F3F3F;
+    color: #fff;
+}
+
+table td {
+    border: 1px solid #aaa;
+    padding: 0 4px;
+}
+
+table.atCenter td {
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff;
+}
+
 em {
     color: rgb(164, 34, 16);
     font-weight: 900;
@@ -126,7 +165,7 @@ em {
 }
 
 strong {
-    background-color: #00ff3754;
+    background-color: rgba(0, 255, 55, 0.33);
     font-weight: normal;
     font-style: normal;
 }
@@ -145,4 +184,12 @@ footer {
 
 .atCenter {
     text-align: center;
+}
+
+.syntaxhighlighter code, .syntaxhighlighter div {
+    word-break: normal;
+}
+
+.syntaxhighlighter pre, .syntaxhighlighter code {
+    white-space: pre;
 }
