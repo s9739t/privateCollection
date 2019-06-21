@@ -22,13 +22,25 @@ function myAlert() {
     //添加编辑
     var date=document.getElementById("time");
     var currentHref=window.location.href;
-    var targetHref=currentHref.replace("https://s9739t.github.io/privateCollection/","https://github.com/s9739t/privateCollection/edit/master/");
+    var targetHref=currentHref.replace("https://loubth.github.io/collection/","https://github.com/loubth/collection/edit/master/");
     date.onclick= function () {
         window.location.href=targetHref;
     }
     date.style.cursor="pointer";
 
 }
+
+//添加目录
+window.onload = function () {
+    var catalog=document.createElement("div");
+    catalog.id="catalog";
+    catalog.style.width="60px";
+    catalog.style.margin="0 auto";
+    catalog.innerHTML="<a href='https://loubth.github.io/collection/index.html' target='_blank'>返回目录</a>";
+    var info=document.getElementById("info");
+    info.appendChild(catalog);
+};
+
 
 
 
